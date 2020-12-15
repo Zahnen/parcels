@@ -1,3 +1,5 @@
+using System;
+
 namespace Parcels.Models
 { 
   public class Parcel
@@ -16,7 +18,14 @@ namespace Parcels.Models
     }
     public int Volume()
     {
-      return Length * Width * Height;
+      int volume = Length * Width * Height;
+      return volume;
+    }
+    public double CostToShip(double volume)
+    {
+      double shippingCostWhole = volume / 32;
+      double shippingCostRounded = Math.Round(shippingCostWhole, 2);
+      return shippingCostRounded;
     }
   }
 }

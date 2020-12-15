@@ -28,5 +28,13 @@ namespace Parcels.Tests
       int confirmVolume = 350;
       Assert.AreEqual(confirmVolume, newTestParcel.Volume());
     }
+    [TestMethod]
+    public void ParcelConstructor_ReturnsCostOfShippingBasedOnVolumeDividedBy32_Int()
+    {
+      Parcel newTestParcel = new Parcel(5, 7, 10, 0);
+      double testCost = 10.94;
+      double volume = newTestParcel.Volume();
+      Assert.AreEqual(testCost, newTestParcel.CostToShip(volume));
+    }
   }
 }
