@@ -1,6 +1,5 @@
 Parcel Class 
-_dimensions = dimensions
-_weight = weight
+
 
 displays dimensions and weight
 Volume() = multiply  l * w * h returns the product of the sides

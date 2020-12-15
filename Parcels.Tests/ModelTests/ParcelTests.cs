@@ -21,7 +21,12 @@ namespace Parcels.Tests
       Assert.AreEqual(confirmParcelLength, newParcel.Length);
 
     }
+    [TestMethod]
+    public void ParcelConstructor_ReturnsVolumeOfParcel_Volume()
+    {
+      Parcel newTestParcel = new Parcel(5, 7, 10, 0);
+      int confirmVolume = 350;
+      Assert.AreEqual(confirmVolume, newTestParcel.Volume());
+    }
   }
 }
-
-
